@@ -1,0 +1,60 @@
+<!--WAP to create light and apply the Turn on and off propertise-->
+<html>
+  <head>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <svg id="mysvg" height="100%" width="100%" style="background-color: rgb(178, 119, 245);">
+        
+        <text x="70" y="70" stroke="black" style="font-size: 70px;">Click to On and Off the Bulb.</text>
+        <ellipse cx="500" cy="200" rx="100" ry="110" fill="white" stroke="white" onclick="callMe()" id="el" style="cursor: pointer;"></ellipse>
+        <rect x="460" y="301" height="50" width="80" stroke="white" fill="white"></rect>
+        
+        <text id="txt" x="470" y="200" stroke="black" style="font-size: 40px;">Off</text>
+        <rect x="465" y="351" height="10" width="70" stroke="grey" fill="white"></rect>
+
+        <rect x="475" y="361" height="40" width="50" stroke="grey" fill="white"></rect>
+
+        <defs>
+          <g id="l">
+            
+          </g>
+        </defs>
+        <line id="ln" x1="472" y1="370" x2="528" y2="363" stroke="grey" stroke-width="3"></line>
+        <line x1="472" y1="380" x2="528" y2="373" stroke="grey" stroke-width="3"></line>
+        <line x1="472" y1="390" x2="528" y2="383" stroke="grey" stroke-width="3"></line>
+        <line x1="472" y1="400" x2="528" y2="393" stroke="grey" stroke-width="3"></line>
+
+        <polyline points="475,401,525,401,517,409,483,409" stroke="grey" fill="grey"></polyline>
+
+      </svg>
+    </center>
+    <script>
+      let color="yellow";
+      function callMe()
+      {
+        if(color=="yellow")
+        {
+          document.getElementById("txt").innerHTML="On";
+          document.getElementById("el").style.fill=color;
+          color="white";    
+        }
+        else
+        {
+          document.getElementById("txt").innerHTML="Off";
+          document.getElementById("el").style.fill=color;
+          color="yellow";      
+        }
+        
+
+         
+      }
+    </script>
+  </body>
+</html>
